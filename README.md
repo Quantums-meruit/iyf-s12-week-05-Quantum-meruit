@@ -1,25 +1,31 @@
 # Week 5: DOM Manipulation — Interactive To-Do List
 
-## About This Project
+## Author
+
+- **Name:** Joseph Kinyanjui
+- **GitHub:** [@Quantums-meruit](https://github.com/Quantums-meruit)
+- **Date:** November 10, 2026
+
+## Project Description
 
 This project is part of my Week 5 learning journey at the IYF Weekend Academy, Season 12.
 
-This week, I explored the Document Object Model (DOM) and learned how JavaScript interacts with HTML elements to make web pages dynamic and interactive.
+The focus of this week's work was DOM manipulation and understanding how JavaScript interacts with HTML elements to create dynamic and interactive web pages.
 
-The main project is an interactive To-Do List application. It allows users to add tasks, mark them as completed, edit them, filter them and remove them. I also worked on separate practice exercises covering DOM manipulation, event handling, event delegation and form validation.
+For the main project, I built an interactive To-Do List application where users can add tasks, mark them as completed, edit them, filter them and delete them. Alongside the application, I completed DOM practice exercises covering element selection, traversal, content manipulation, event handling, event delegation and form validation.
 
-My main goal was to put the concepts from the lessons into practice and understand how different JavaScript features work together in a real project.
+I wanted to use this project to connect the concepts covered in the lessons and understand how they work together in a practical application.
 
 ## Technologies Used
 
-- **HTML5:** Used to structure the application and practice pages.
+- **HTML5:** Used to structure the application, practice exercises and daily challenges.
 - **CSS3:** Used for styling, layout, responsive design and visual feedback.
-- **JavaScript (ES6+):** Used for DOM manipulation, event handling, task management and validation.
+- **JavaScript (ES6+):** Used for DOM manipulation, event handling, task management and form validation.
 - **Git:** Used for version control and tracking project changes.
-- **GitHub:** Used to host the project repository.
-- **GitHub Pages:** Used to make the project accessible online.
+- **GitHub:** Used to host the project repository and manage the source code.
+- **GitHub Pages:** Used to deploy the project and make the application accessible online.
 
-## Project Features
+## Features
 
 ### Interactive To-Do List
 
@@ -28,7 +34,7 @@ My main goal was to put the concepts from the lessons into practice and understa
 - Mark tasks as completed and undo completion.
 - Delete individual tasks.
 - Filter tasks by All, Active and Completed.
-- Display the number of remaining tasks.
+- Display the number of remaining tasks, including correct singular and plural wording.
 - Clear all completed tasks.
 - Double-click a task to edit it.
 - Press Enter to save an edit or Escape to cancel it.
@@ -36,120 +42,80 @@ My main goal was to put the concepts from the lessons into practice and understa
 
 ### DOM Practice
 
-The `dom-practice.html` page contains exercises covering DOM selection, traversal, content modification, attributes, classes, creating and removing elements, events, event bubbling, delegation and form validation.
+The `dom-practice.html` page contains exercises covering:
+
+- Selecting HTML elements using different DOM selection methods.
+- Traversing the DOM using parent, child and sibling relationships.
+- Modifying text content, HTML content and attributes.
+- Working with CSS classes through `classList`.
+- Creating, inserting, cloning and removing elements.
+- Handling browser events and event objects.
+- Understanding event bubbling and event delegation.
+- Preventing default browser behaviour and validating forms.
 
 ### Daily Challenges
 
-The `daily-challenges/` folder contains five practical exercises:
+The `daily-challenges/` directory contains five practical exercises:
 
 1. **Color Changer:** Changes heading colors using randomly generated hexadecimal colors.
-2. **Dynamic Element Creator:** Creates new paragraphs dynamically and gives each one a delete button.
-3. **Image Remover:** Removes images from the page, with an additional hide-and-show feature.
-4. **Content Copier:** Copies content from one section into another, including a drag-and-drop interaction.
-5. **Dark Mode Toggle:** Allows users to switch between light and dark themes while remembering their preference using local storage.
+2. **Dynamic Element Creator:** Creates numbered paragraphs dynamically and allows individual elements to be deleted.
+3. **Image Remover:** Demonstrates removing images and controlling their visibility.
+4. **Content Copier:** Copies content between sections and includes a drag-and-drop interaction.
+5. **Dark Mode Toggle:** Allows users to switch between light and dark themes while saving their preference using local storage.
 
-## What I Learned
+## How to Run
 
-One of my biggest takeaways from this week was understanding that JavaScript does not just work with data; it can also interact directly with the structure and content of a webpage.
-
-I became more familiar with selecting elements using methods such as `getElementById()`, `querySelector()` and `querySelectorAll()`. I also learned that these methods do not all return the same type of result. For example, `querySelector()` returns the first matching element, while `querySelectorAll()` returns a collection of matching elements.
-
-DOM traversal helped me understand how elements are connected. Working with `parentElement`, `children`, `nextElementSibling` and `closest()` made it easier to move around the document without having to select every element again.
-
-Another important lesson was learning how to create and insert elements dynamically. Methods such as `createElement()`, `appendChild()`, `append()`, `prepend()` and `insertBefore()` showed me how a webpage can be updated without reloading it.
-
-The To-Do List brought many of these concepts together. I used an array of objects to represent the tasks and a rendering function to display them. This helped me understand the importance of separating application data from what the user sees on the screen.
-
-I also gained a better understanding of event bubbling and event delegation. Instead of attaching a separate click listener to every task, I used one delegated click listener on the task list. This allows the application to handle interactions with tasks that are added dynamically.
-
-Security was another important lesson. I used `textContent` when displaying task names so that user-entered content is treated as ordinary text instead of being interpreted as HTML. This is particularly important when accepting input from users.
-
-Finally, working with forms helped me understand `preventDefault()`, input validation and event objects. I can now see how these concepts contribute to building interactive applications that respond to user actions without unnecessary page reloads.
-
-## Challenges I Encountered
-
-The most interesting challenge was getting the different parts of the To-Do List to work together correctly. Adding a task was relatively straightforward, but making sure that completing, deleting, editing and filtering tasks all updated the displayed list correctly required more thought.
-
-Keeping the task data organised was particularly important. I had to understand why the array should remain the main source of truth instead of relying only on the elements currently displayed in the browser.
-
-Event delegation also took some careful thinking. I needed to understand how an event triggered by a button inside a task could reach the parent list and how to identify the correct task using `closest()` and `data-id`.
-
-The double-click editing feature introduced another interesting problem: a double-click also begins with a normal click. I had to account for that difference so that editing a task would not accidentally change its completion status.
-
-Form validation was another area that required attention. Checking for empty input alone was not enough; trimming whitespace and displaying useful feedback made the interaction more reliable.
-
-These challenges helped me appreciate that writing JavaScript is not only about making something work once. It is also about thinking through different user actions and making sure the application behaves consistently.
-
-## Project Structure
-
-```text
-.
-├── index.html
-├── styles.css
-├── app.js
-├── dom-practice.html
-├── dom.js
-├── daily-challenges/
-│   ├── index.html
-│   ├── challenges.css
-│   └── challenges.js
-├── .gitignore
-└── README.md
-```
-
-## How to Run the Project
-
-1. Clone the repository:
+1. Clone this repository:
 
    ```bash
    git clone https://github.com/Quantums-meruit/iyf-s12-week-05-Quantums-meruit.git
    ```
 
-2. Open the project folder in Visual Studio Code.
+2. Open the cloned project folder in Visual Studio Code.
 
-3. Open `index.html` in a browser. You can also use the Live Server extension in VS Code.
+3. Open `index.html` in your browser. Alternatively, use the Live Server extension in Visual Studio Code.
 
-4. Open `dom-practice.html` to explore the DOM lessons.
+4. Open `dom-practice.html` to explore the DOM practice exercises.
 
-5. Open `daily-challenges/index.html` to view the five daily challenges.
-
-No additional packages or installation steps are required.
-
-## Live Demo
-
-[View the Week 5 Interactive To-Do List](https://quantums-meruit.github.io/iyf-s12-week-05-Quantum-meruit/)
-
-## GitHub Repository
-
-[View the Week 5 Project on GitHub](https://github.com/Quantums-meruit/iyf-s12-week-05-Quantum-meruit)
-
-## Final Thoughts
-
-Week 5 helped me connect several JavaScript concepts that I had previously studied separately. Building the To-Do List made DOM manipulation and event handling feel more practical because I could see the results of each interaction immediately.
-
-I still have more to learn, but this project has given me a stronger foundation for working with dynamic webpages and building more interactive applications in the coming weeks.
-
-## How to Run the Project
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/Quantums-meruit/iyf-s12-week-05-Quantums-meruit.git
-   ```
-
-2. Open the project folder in Visual Studio Code.
-
-3. Open `index.html` in a browser. You can also use the Live Server extension in VS Code.
-
-4. Open `dom-practice.html` to explore the DOM lessons.
-
-5. Open `daily-challenges/index.html` to view the five daily challenges.
+5. Open `daily-challenges/index.html` to explore the five daily challenges.
 
 No additional packages or installation steps are required.
 
+## Lessons Learned
+
+This week helped me understand how JavaScript can interact with the DOM to change the content, structure and behaviour of a webpage.
+
+I became more comfortable selecting elements using methods such as `getElementById()`, `querySelector()` and `querySelectorAll()`. I also learned the difference between selecting a single matching element and working with a collection of matching elements.
+
+DOM traversal was another important area of learning. Using `parentElement`, `children`, `nextElementSibling` and `closest()` helped me understand how elements are related and how to navigate between them.
+
+I also learned how to create and manipulate elements dynamically using methods such as `createElement()`, `append()`, `prepend()`, `appendChild()` and `insertBefore()`.
+
+Building the To-Do List helped me understand why application data and the displayed interface should be managed separately. By storing tasks in an array of objects and using a rendering function, I could update the interface whenever the underlying task data changed.
+
+One of the most useful concepts was event delegation. Instead of attaching a separate click listener to every task, I used a single click listener on the task list. This works because events bubble up through the DOM, allowing the parent element to handle interactions with dynamically added tasks.
+
+I also learned the importance of using `textContent` when displaying user input. It treats the supplied content as text rather than interpreting it as HTML, which is a safer approach when handling user-entered information.
+
+Finally, working with forms and browser events improved my understanding of `addEventListener()`, event objects, `preventDefault()` and input validation.
+
+## Challenges Faced
+
+One of the main challenges was keeping the To-Do List's data and interface synchronised. Adding a task was only one part of the application; completing, editing, deleting and filtering tasks also needed to update the displayed results correctly.
+
+I addressed this by keeping the tasks in an array of objects and using a rendering function to rebuild the visible list from the current data.
+
+Event delegation also required careful understanding. I needed to identify which button had been clicked, determine its associated task and perform the correct action. Using `closest()` and `data-id` helped me connect user interactions to the correct task.
+
+The double-click editing feature introduced another challenge because a double-click begins with a normal click. I had to account for this interaction so that editing a task would not accidentally trigger its completion action.
+
+Input validation was another important consideration. Checking whether an input was empty was not enough because users could enter spaces without providing an actual task. Using `trim()` helped prevent this.
+
+These challenges taught me to think beyond whether individual features work and consider how different interactions affect the application as a whole.
+
 ## Live Demo
 
-[View the Week 5 Interactive To-Do List](https://quantums-meruit.github.io/iyf-s12-week-05-Quantum-meruit/)
+[View the Week 5 Interactive To-Do List](https://quantums-meruit.github.io/iyf-s12-week-05-Quantums-meruit/)
 
 ## GitHub Repository
 
@@ -157,6 +123,8 @@ No additional packages or installation steps are required.
 
 ## Final Thoughts
 
-Week 5 helped me connect several JavaScript concepts that I had previously studied separately. Building the To-Do List made DOM manipulation and event handling feel more practical because I could see the results of each interaction immediately.
+Week 5 gave me an opportunity to put several JavaScript concepts into practice in one project. The To-Do List helped me understand how DOM manipulation, event handling, arrays and functions can work together to create an interactive application.
 
-I still have more to learn, but this project has given me a stronger foundation for working with dynamic webpages and building more interactive applications in the coming weeks.
+I also gained a better appreciation of writing code that is organised, reusable and responsive to different user actions.
+
+There is still more to learn, but this project has strengthened my understanding of JavaScript and given me a better foundation for the next stages of my web development journey.
