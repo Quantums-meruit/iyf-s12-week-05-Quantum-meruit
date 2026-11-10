@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 5 Daily DOM Challenges</title>
+  <link rel="stylesheet" href="challenges.css">
+  <script src="challenges.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <p class="eyebrow">IYF WEEKEND ACADEMY · SEASON 12</p>
+      <h1>Daily DOM Challenges</h1>
+      <p>Five small exercises in selecting, creating and updating page elements.</p>
+    </header>
+
+    <section class="challenge">
+      <h2>Day 1 — Color Changer</h2>
+      <p>Change every h1, h2 and h3 heading to a randomly generated hex color.</p>
+      <button id="change-heading-color" type="button">Change heading colors</button>
+    </section>
+
+    <section class="challenge">
+      <h2>Day 2 — Dynamic Element Creator</h2>
+      <p>Add numbered paragraphs. Each paragraph has its own delete button.</p>
+      <button id="add-paragraph" type="button">Add paragraph</button>
+      <div id="paragraph-output" aria-live="polite"></div>
+    </section>
+
+    <section class="challenge">
+      <h2>Day 3 — Image Remover</h2>
+      <p>Remove all images, or use the bonus control to hide and show them instead.</p>
+      <div class="image-samples">
+        <img src="https://placehold.co/180x100?text=Image+One" alt="Sample image one">
+        <img src="https://placehold.co/180x100?text=Image+Two" alt="Sample image two">
+      </div>
+      <button id="remove-images" type="button">Remove all images</button>
+      <button id="toggle-images" type="button">Hide images</button>
+      <p id="image-status" role="status"></p>
+    </section>
+
+    <section class="challenge">
+      <h2>Day 4 — Content Copier</h2>
+      <p>Copy the source content into the target. Bonus: drag the source box into the target.</p>
+      <div class="copy-layout">
+        <div id="copy-source" class="copy-box" draggable="true">
+          <h3>Source content</h3>
+          <p>This is the content that will be copied to the target box.</p>
+        </div>
+        <div id="copy-target" class="copy-box" aria-label="Copy target">
+          <h3>Target box</h3>
+          <p>Copied content will appear here.</p>
+        </div>
+      </div>
+      <button id="copy-content" type="button">Copy content</button>
+      <p id="copy-status" role="status"></p>
+    </section>
+
+    <section class="challenge">
+      <h2>Day 5 — Dark Mode Toggle</h2>
+      <p>Toggle a class on the body, remember the preference, and animate the transition.</p>
+      <button id="dark-mode-toggle" type="button" aria-pressed="false">Enable dark mode</button>
+    </section>
+  </main>
+</body>
+</html>

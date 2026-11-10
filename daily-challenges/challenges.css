@@ -1,0 +1,23 @@
+* { box-sizing: border-box; }
+:root { font-family: system-ui, sans-serif; color: #24283a; background: #f2f4fa; }
+body { margin: 0; padding: 28px 16px; transition: background-color .25s ease, color .25s ease; }
+.page { width: min(100%, 850px); margin: auto; }
+header { margin-bottom: 24px; }
+.eyebrow { color: #6572b8; font-size: .75rem; font-weight: 800; letter-spacing: .12em; }
+h1 { margin-bottom: 5px; }
+.challenge { margin: 16px 0; padding: 20px; background: #fff; border: 1px solid #e0e4ef; border-radius: 14px; }
+button { margin: 5px 5px 5px 0; padding: 9px 13px; color: #fff; background: #596bd0; border: 0; border-radius: 8px; cursor: pointer; }
+button:hover { background: #4658bd; }
+.challenge-paragraph { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin: 10px 0; padding: 8px 12px; background: #f4f5fb; border-radius: 8px; }
+.challenge-paragraph button { background: #a64b5b; }
+.image-samples { display: flex; flex-wrap: wrap; gap: 12px; margin: 12px 0; }
+.image-samples img { width: 180px; max-width: 100%; border-radius: 8px; }
+.copy-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+.copy-box { min-height: 130px; padding: 14px; border: 2px dashed #aab1c8; border-radius: 10px; }
+.copy-box h3 { margin-top: 0; }
+#copy-target.is-drop-target { background: #eef0ff; border-color: #596bd0; }
+body.dark-mode { color: #eef0ff; background: #171a27; }
+body.dark-mode .challenge { color: #eef0ff; background: #252a3b; border-color: #3a4058; }
+body.dark-mode .challenge-paragraph { background: #30364a; }
+body.dark-mode .copy-box { border-color: #707aab; }
+@media (max-width: 560px) { .copy-layout { grid-template-columns: 1fr; } }

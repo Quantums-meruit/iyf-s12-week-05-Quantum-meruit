@@ -1,47 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM Practice</title>
-    <style>
-        .highlight { background-color: yellow; }
-        .container { padding: 20px; border: 1px solid #ccc; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Practice — Lessons 9 &amp; 10</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { max-width: 980px; margin: 0 auto; padding: 24px; font: 16px/1.55 system-ui, sans-serif; color: #252a3b; }
+    .container { padding: 20px; border: 1px solid #ccc; border-radius: 10px; }
+    .highlight { background: #fff2a8; }
+    .accent { color: #6848b8; font-weight: 700; }
+    .error { border: 2px solid #c43d51; }
+    .error-message { color: #b32f45; font-size: .9rem; }
+    .success { color: #187747; }
+    .demo-box { margin: 10px 0; padding: 12px; border: 1px dashed #9aa2b6; }
+    .demo-box button, button { margin: 4px; padding: 7px 11px; cursor: pointer; }
+    .nav-list { display: flex; gap: 18px; padding-left: 20px; }
+    .bubbling-box { padding: 18px; border: 2px solid #8d93aa; }
+    #parent { background: #f0efff; } #child { background: #fff5df; }
+    input { margin: 5px; padding: 8px; }
+    section { margin: 24px 0; }
+  </style>
+  <script src="dom.js" defer></script>
 </head>
 <body>
-    <header id="main-header">
-        <h1>DOM Practice</h1>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="#" class="nav-link">Home</a></li>
-                <li><a href="#" class="nav-link">About</a></li>
-                <li><a href="#" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main class="container">
-        <article>
-            <h2 class="title">Article Title</h2>
-            <p class="content">This is the first paragraph.</p>
-            <p class="content">This is the second paragraph.</p>
-        </article>
-        
-        <section>
-            <h2>Form Section</h2>
-            <form id="contact-form">
-                <input type="text" id="name" name="name" placeholder="Name">
-                <input type="email" id="email" name="email" placeholder="Email">
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2026</p>
-    </footer>
-    
-    <script src="dom.js"></script>
+  <header id="main-header">
+    <h1>DOM Practice</h1>
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <article data-id="123" data-category="learning">
+      <h2 class="title">Article Title</h2>
+      <p class="content">This is the first paragraph.</p>
+      <p class="content">This is the second paragraph.</p>
+    </article>
+
+    <section id="html-demo">
+      <h2>Text and HTML safety demonstration</h2>
+      <p id="trusted-html-demo"></p>
+      <p id="unsafe"></p>
+      <p id="safe"></p>
+    </section>
+
+    <section id="insertion-demo">
+      <h2>Element insertion methods</h2>
+      <p class="insertion-anchor">This is the original anchor paragraph.</p>
+    </section>
+
+    <section id="clear-demo">
+      <h2>Clear-children demonstration</h2>
+      <p>First child</p><p>Second child</p>
+    </section>
+
+    <section id="event-demo">
+      <h2>Event listeners and click counter</h2>
+      <p>Counter: <strong id="counter">0</strong></p>
+      <button id="increase">Increase</button>
+      <button id="decrease">Decrease</button>
+      <button id="reset">Reset</button>
+      <button id="temporary-listener">Click with removable listener</button>
+      <p id="event-message" aria-live="polite"></p>
+    </section>
+
+    <section id="event-object-demo">
+      <h2>Event object and keyboard shortcuts</h2>
+      <a id="demo-link" href="https://example.com">Try this link (navigation is prevented)</a>
+      <p>Click the page and type keys; inspect the console for event properties.</p>
+    </section>
+
+    <section id="bubbling-demo">
+      <h2>Event bubbling</h2>
+      <div id="grandparent" class="bubbling-box">Grandparent
+        <div id="parent" class="bubbling-box">Parent
+          <div id="child" class="bubbling-box">Child — click here</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="delegation-demo">
+      <h2>Delegated list</h2>
+      <ul id="delegated-list">
+        <li>First item <button type="button">Remove</button></li>
+        <li>Second item <button type="button">Remove</button></li>
+      </ul>
+      <button id="add-delegated-item" type="button">Add another item</button>
+    </section>
+
+    <section id="contact-section">
+      <h2>Contact form validation</h2>
+      <form id="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Name">
+        <span id="name-error" class="error-message"></span><br>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email">
+        <span id="email-error" class="error-message"></span><br>
+        <button type="submit">Submit</button>
+      </form>
+      <p id="form-success" class="success" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer><p>&copy; 2026 DOM Practice</p></footer>
 </body>
 </html>
