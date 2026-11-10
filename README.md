@@ -121,7 +121,7 @@ No additional packages or installation steps are required.
 
 ## GitHub Repository
 
-[View the Week 5 Project on GitHub](https://github.com/Quantums-meruit/iyf-s12-week-05-Quantums-meruit)
+[View the Week 5 Project on GitHub](https://github.com/Quantums-meruit/iyf-s12-week-05-Quantum-meruit)
 
 ## Final Thoughts
 
