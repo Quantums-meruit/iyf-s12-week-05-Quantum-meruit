@@ -117,7 +117,7 @@ No additional packages or installation steps are required.
 
 ## Live Demo
 
-[View the Week 5 Interactive To-Do List](https://quantums-meruit.github.io/iyf-s12-week-05-Quantums-meruit/)
+[View the Week 5 Interactive To-Do List](https://quantums-meruit.github.io/iyf-s12-week-05-Quantum-meruit/)
 
 ## GitHub Repository
 
