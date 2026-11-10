@@ -112,14 +112,13 @@ The double-click editing feature introduced another challenge because a double-c
 Input validation was another important consideration. Checking whether an input was empty was not enough because users could enter spaces without providing an actual task. Using `trim()` helped prevent this.
 
 These challenges taught me to think beyond whether individual features work and consider how different interactions affect the application as a whole.
+## Live Demos
 
-## Live Demo
-
-[View the Week 5 Interactive To-Do List](https://quantums-meruit.github.io/iyf-s12-week-05-Quantums-meruit/)
-
-## GitHub Repository
-
-[View the Week 5 Project on GitHub](https://github.com/Quantums-meruit/iyf-s12-week-05-Quantums-meruit)
+- [Interactive To-Do List](https://quantums-meruit.github.io/iyf-s12-week-05-Quantums-meruit/)
+  
+- [DOM Practice Exercises](https://quantums-meruit.github.io/iyf-s12-week-05-Quantums-meruit/dom-practice.html)
+  
+- [Daily Challenges](https://quantums-meruit.github.io/iyf-s12-week-05-Quantums-meruit/daily-challenges/)
 
 ## Final Thoughts
 
